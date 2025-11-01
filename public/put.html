@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD - Atualizar (PUT)</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Listar (GET)</a>
+        <a href="/post">Cadastrar (POST)</a>
+        <a href="/put">Atualizar (PUT)</a>
+        <a href="/delete">Deletar (DELETE)</a>
+    </nav>
+    <h1>Atualizar Registro (PUT)</h1>
+
+    <div id="search-section">
+        <h3>Buscar por RG</h3>
+        <label>RG:</label>
+        <input type="text" id="rgBusca" placeholder="Digite o RG para buscar">
+        <input type="button" onclick="buscarDados()" value="Buscar">
+    </div>
+
+    <form id="update-form" style="display:none;">
+        <h3>Dados do Registro</h3>
+        <input type="hidden" id="id"> <div><label>Nome:</label><input type="text" id="nome"></div>
+        <div><label>Sobrenome:</label><input type="text" id="sobrenome"></div>
+        <div><label>Email:</label><input type="email" id="email"></div>
+        <div><label>Idade:</label><input type="number" id="idade"></div>
+        <div><label>Telefone:</label><input type="text" id="telefone"></div>
+        <div><label>Rua:</label><input type="text" id="rua"></div>
+        <div><label>Bairro:</label><input type="text" id="bairro"></div>
+        <div><label>Cidade:</label><input type="text" id="cidade"></div>
+        <div><label>Estado:</label><input type="text" id="estado" maxlength="2"></div>
+        <div><label>RG:</label><input type="text" id="rg" readonly></div> <input type="button" onclick="atualizarDados()" value="Atualizar Dados">
+    </form>
+    
+    <script src="/put/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD - Deletar (DELETE)</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Listar (GET)</a>
+        <a href="/post">Cadastrar (POST)</a>
+        <a href="/put">Atualizar (PUT)</a>
+        <a href="/delete">Deletar (DELETE)</a>
+    </nav>
+    <h1>Deletar Registro (DELETE)</h1>
+
+    <div id="search-section">
+        <h3>Buscar por RG para Deletar</h3>
+        <label>RG:</label>
+        <input type="text" id="rgBusca" placeholder="Digite o RG para buscar">
+        <input type="button" onclick="buscarParaDeletar()" value="Buscar">
+    </div>
+
+    <div id="delete-confirm" style="display:none; margin-top: 20px;">
+        <h4>Registro Encontrado:</h4>
+        <p><strong>Nome:</strong> <span id="nome-deletar"></span></p>
+        <p><strong>Email:</strong> <span id="email-deletar"></span></p>
+        <p><strong>RG:</strong> <span id="rg-deletar"></span></p>
+        <input type="hidden" id="id-deletar">
+        <input type="button" onclick="deletarDados()" value="Confirmar Deleção" style="background-color: #f44336;">
+    </div>
+    
+    <script src="/delete/script.js"></script>
+</body>
+</html>
